@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = process.env.PORT || 5014;
+const port = process.env.PORT || 5016;
 
 const mongoURI = 'mongodb+srv://kalpeshkahre7777:Kalpesh%40123@yearbook.f0h3kns.mongodb.net/yearbook';
 
@@ -20,6 +20,19 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: String,
 });
+
+const memorySchema = new mongoose.Schema({
+  selectedSport: String,
+  selectedName: String,
+  description: String,
+  userName: String,
+  userEmail: String,
+  photo: String,
+  video: String,
+}, { collection: 'responses' });
+
+const Memory = mongoose.model('Memory', memorySchema);
+
 
 const User = mongoose.model('User', userSchema);
 
@@ -72,17 +85,28 @@ app.post('/api/submit', upload.fields([{ name: 'photo', maxCount: 1 }, { name: '
   const photo = req.files.photo ? req.files.photo[0].path : null;
   const video = req.files.video ? req.files.video[0].path : null;
 
-  console.log('Form submitted with data:');
-  console.log('Selected Sport:', selectedSport);
-  console.log('Selected Name:', selectedName);
-  console.log('Description:', description);
-  console.log('User Name:', userName);
-  console.log('User Email:', userEmail);
-  console.log('Photo Path:', photo);
-  console.log('Video Path:', video);
+  try {
+    // Create a new memory document
+    const newMemory = new Memory({
+      selectedSport,
+      selectedName,
+      description,
+      userName,
+      userEmail,
+      photo,
+      video,
+    });
 
-  res.json({ message: 'Form submitted successfully and data saved to database' });
+    // Save the memory document to MongoDB
+    await newMemory.save();
+
+    res.json({ message: 'Form submitted successfully and data saved to database' });
+  } catch (error) {
+    console.error('Error saving memory:', error);
+    res.status(500).json({ error: 'Error saving memory to database' });
+  }
 });
+
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 

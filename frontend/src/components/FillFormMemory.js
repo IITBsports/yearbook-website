@@ -50,14 +50,14 @@ const FillMemoryForm = () => {
     if (video) {
       formData.append('video', video);
     }
-
+  
     try {
       await axios.post('/api/submit', formData);
       setSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);
     }
-  };
+  };  
 
   if (submitted) {
     navigate('/response-submitted');
