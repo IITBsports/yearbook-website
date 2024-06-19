@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = process.env.PORT || 5016;
+const port = process.env.PORT || 8000;
 
 const mongoURI = 'mongodb+srv://kalpeshkahre7777:Kalpesh%40123@yearbook.f0h3kns.mongodb.net/yearbook';
 
@@ -79,6 +79,26 @@ app.post('/api/register', async (req, res) => {
     res.status(500).json({ error: 'Error registering user' });
   }
 });
+
+
+
+// Add this route for alumni registration
+app.post('/api/alumni-register', async (req, res) => {
+  const { name, rollNo, email, password } = req.body;
+  try {
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ error: 'User already exists' });
+    }
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = new User({ name, rollNo, email, password: hashedPassword });
+    await newUser.save();
+    res.json({ message: 'Alumni registered successfully' });
+  } catch (error) {
+    res.status(500).json({ error: 'Error registering alumni' });
+  }
+});
+
 
 app.post('/api/submit', upload.fields([{ name: 'photo', maxCount: 1 }, { name: 'video', maxCount: 1 }]), async (req, res) => {
   const { selectedSport, selectedName, description, userName, userEmail } = req.body;

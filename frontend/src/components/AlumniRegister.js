@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Register = () => {
+const AlumniRegister = () => {
   const [name, setName] = useState('');
+  const [rollNo, setRollNo] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -12,18 +13,14 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    if (!email.endsWith('@iitb.ac.in')) {
-      setError('Email must be in the format __@iitb.ac.in');
-      return;
-    }
     try {
-      const response = await axios.post('/api/register', { name, email, password });
+      const response = await axios.post('/api/alumni-register', { name, rollNo, email, password });
       setSuccess(response.data.message);
       setError('');
       // Redirect to login page after 2 seconds
       setTimeout(() => navigate('/'), 2000);
     } catch (error) {
-      setError('Error registering user');
+      setError('Error registering alumni');
       setSuccess('');
     }
   };
@@ -35,7 +32,7 @@ const Register = () => {
           <div className="eleven"><h1>IIT Bombay Sports Yearbook 2024</h1></div>
       </div>
       <div className="register-container">
-        <h2>Register</h2>
+        <h2>Register as Alumni</h2>
         <form onSubmit={handleRegister}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
@@ -44,6 +41,16 @@ const Register = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="rollNo">Roll No:</label>
+            <input
+              type="text"
+              id="rollNo"
+              value={rollNo}
+              onChange={(e) => setRollNo(e.target.value)}
               required
             />
           </div>
@@ -71,10 +78,9 @@ const Register = () => {
           {success && <p className="success">{success}</p>}
           <button type="submit">Register</button>
         </form>
-        <button onClick={() => navigate('/alumni-register')}>Register as Alumni</button>
       </div>
     </div>
   );
 };
 
-export default Register;
+export default AlumniRegister;
