@@ -7,9 +7,9 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = process.env.PORT || 5013;
+const port = process.env.PORT || 5014;
 
-const mongoURI = 'mongodb://127.0.0.1:27017/yearbook';
+const mongoURI = 'mongodb+srv://kalpeshkahre7777:Kalpesh%40123@yearbook.f0h3kns.mongodb.net/yearbook';
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
