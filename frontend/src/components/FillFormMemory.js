@@ -64,39 +64,46 @@ const FillMemoryForm = () => {
   }
 
   return (
-    <div className="fill-memory-form bg">
-      
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="sport">Select Sport:</label>
-          <select id="sport" value={selectedSport} onChange={handleSportChange} required>
-            <option value="">Select</option>
-            <option value="football">Football</option>
-            <option value="basketball">Basketball</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="name">Select Name:</label>
-          <select id="name" value={selectedName} onChange={handleNameChange} required>
-            <option value="">Select</option>
-            <option value="Raghav">Raghav</option>
-            <option value="Bhavin">Bhavin</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="description">Write about it:</label>
-          <textarea id="description" value={description} onChange={handleDescriptionChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="photo">Add Photo:</label>
-          <input type="file" id="photo" accept="image/*" onChange={handlePhotoChange} />
-        </div>
-        <div className="form-group">
-          <label htmlFor="video">Add Video:</label>
-          <input type="file" id="video" accept="video/*" onChange={handleVideoChange} />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+<div className="fill-memory-page">
+      <div className="fill-memory-left">
+      <img src='isc-logo.png' alt='ISC Logo' className='logo' />
+        <h2>ISC YEARBOOK</h2>
+        <h3>Fill Your Memory</h3>
+        <p>Share your experiences and moments!</p>
+      </div>
+      <div className="fill-memory-right">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="sport">Select Sport:</label>
+            <select id="sport" value={selectedSport} onChange={handleSportChange} required>
+              <option value="">Select</option>
+              <option value="football">Football</option>
+              <option value="basketball">Basketball</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="name">Select Name:</label>
+            <select id="name" value={selectedName} onChange={handleNameChange} required>
+              <option value="">Select</option>
+              <option value="Raghav">Raghav</option>
+              <option value="Bhavin">Bhavin</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="description">Write about it:</label>
+            <textarea id="description" value={description} onChange={handleDescriptionChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="photo">Add Photo:</label>
+            <input type="file" id="photo" accept="image/*" onChange={handlePhotoChange} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="video">Add Video:</label>
+            <input type="file" id="video" accept="video/*" onChange={handleVideoChange} />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 };

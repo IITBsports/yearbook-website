@@ -29,51 +29,104 @@ const Register = () => {
   };
 
   return (
-    <div className='login-register'>
-      <div class="stylish box-01">
-	        <h2 class="effect-01">Yearbook</h2>
-          <div className="eleven"><h1>IIT Bombay Sports Yearbook 2024</h1></div>
+    <div className='register-page'>
+      <div className='welcome-section'>
+        <img src='isc-logo.png' alt='ISC Logo' className='logo' />
+        <h1>Welcome to ISC Yearbook 2024!</h1>
+        <div className='carousel'>
+          <img src='image1.jpg' alt='Sport 1' />
+          <img src='image2.jpg' alt='Sport 2' />
+          <img src='image3.jpg' alt='Sport 3' />
+        </div>
       </div>
-      <div className="register-container">
+      <div className='register-section'>
         <h2>Register</h2>
         <form onSubmit={handleRegister}>
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
+          <div className='form-group'>
+            <label htmlFor='name'>Name:</label>
             <input
-              type="text"
-              id="name"
+              type='text'
+              id='name'
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
+          <div className='form-group'>
+            <label htmlFor='email'>Email:</label>
             <input
-              type="email"
-              id="email"
+              type='email'
+              id='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password:</label>
+          <div className='form-group'>
+            <label htmlFor='password'>Password:</label>
             <input
-              type="password"
-              id="password"
+              type='password'
+              id='password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          {error && <p className="error">{error}</p>}
-          {success && <p className="success">{success}</p>}
-          <button type="submit">Register</button>
+          {error && <p className='error'>{error}</p>}
+          {success && <p className='success'>{success}</p>}
+          <button type='submit' className='register-button'>Register</button>
+        
+        <button onClick={() => navigate('/alumni-register')} className='alumni-register-button'>
+          Register as Alumni
+        </button>
         </form>
-        <button onClick={() => navigate('/alumni-register')}>Register as Alumni</button>
       </div>
     </div>
+    // <div className='login-register'>
+    //   <div class="stylish box-01">
+	  //       <h2 class="effect-01">Yearbook</h2>
+    //       <div className="eleven"><h1>IIT Bombay Sports Yearbook 2024</h1></div>
+    //   </div>
+    //   <div className="register-container">
+    //     <h2>Register</h2>
+    //     <form onSubmit={handleRegister}>
+    //       <div className="form-group">
+    //         <label htmlFor="name">Name:</label>
+    //         <input
+    //           type="text"
+    //           id="name"
+    //           value={name}
+    //           onChange={(e) => setName(e.target.value)}
+    //           required
+    //         />
+    //       </div>
+    //       <div className="form-group">
+    //         <label htmlFor="email">Email:</label>
+    //         <input
+    //           type="email"
+    //           id="email"
+    //           value={email}
+    //           onChange={(e) => setEmail(e.target.value)}
+    //           required
+    //         />
+    //       </div>
+    //       <div className="form-group">
+    //         <label htmlFor="password">Password:</label>
+    //         <input
+    //           type="password"
+    //           id="password"
+    //           value={password}
+    //           onChange={(e) => setPassword(e.target.value)}
+    //           required
+    //         />
+    //       </div>
+    //       {error && <p className="error">{error}</p>}
+    //       {success && <p className="success">{success}</p>}
+    //       <button type="submit">Register</button>
+    //     </form>
+    //     <button onClick={() => navigate('/alumni-register')}>Register as Alumni</button>
+    //   </div>
+    // </div>
   );
 };
 
