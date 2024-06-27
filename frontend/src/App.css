@@ -567,3 +567,10 @@ button:hover {
 .pe_verify_email{
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .welcome-section,
+  .response-submitted-left,
+  .fill-memory-left {
+    display: none;
+  }
+}
