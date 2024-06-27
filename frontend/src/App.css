@@ -172,9 +172,10 @@ button:hover {
 }
 
 .welcome-section .carousel img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
   border-radius: 8px;
+  margin-top: 70px;
   object-fit: cover;
 }
 
@@ -562,4 +563,7 @@ button:hover {
 .success {
   color: green;
   margin-bottom: 1rem;
+}
+.pe_verify_email{
+  margin-bottom: 10px;
 }

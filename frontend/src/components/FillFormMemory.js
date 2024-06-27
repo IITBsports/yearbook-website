@@ -14,8 +14,27 @@ const FillMemoryForm = () => {
   const userName = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')).name : '';
   const userEmail = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')).email : '';
 
+  const sportsPlayers = {
+    Council: ['Anshul Panwar', 'Himanshu M Singhal', 'Riddhima Channa', 'Arpan Adak', 'Angoth Sai Vidhya', 'Anuj Partani', 'Aryan Aswani', 'Adithyan Rajesh', 'Sakshi Patil', 'Parth Dange', 'Goransh Gattani', 'Mukul Raj', 'Aum Jain', 'Sahil Kumar', 'Satyajeet Machale'],
+    Aquatics: ['Madhav Joshi', 'Mansi Khedekar', 'Onam Pabin', 'Aarushi'],
+    Athletics: ['Kapil Bhagat', 'Mayur Morey','Almaas Ummu Salma', 'Dhairya Jhunjhunwala', 'Angoth Sai Vidhya'],
+    Badminton: ['Rupansh Parth','Lokesh Soni','Aanya Verma','Shardul','Darsh Yadav','Akshay Padakanti','Anuj Partani','Jathin','Dyuneesh','Soham','Parshant'],
+    Basketball: ['Varun Raipat','Atishay Jain','Aryan Aswani' ,'Mehul Vijay Chanda','Girish Kishore' ,'Sreetam Tripathi','Uditi Malviya','Shruti Singh','Sai Krishna','Mudit Goyal','Bitthal Parida','Aum Jain','Priyanshu Niranjan','Raghav Singhal' ],
+    BoardGames: ['Shreyam Mishra', 'Siddhesh Yeram'],
+    Cricket: ['Prashant Jaiswal','Harsh Sapkale','Praharsh Shah','Yashas P R','Kunal Shahdeo','Ashutosh Kumar','Prathmesh Nachankar ','Siddhant Kalel','Bhagat ','Sanket Ambre ','Ayush Parmar','Adhityan '],
+    Football: ['Manav Doshi', 'Kaustubh Chaurasia','Akhilesh ','Mokshit','Oshim','Adhi saran','Jatin Chaudhary','Shivanshu Kalia','Onam Tamir','Subhojit','Pushpak','Babu'],
+    Hockey: ['Chaitanya Ramprasad', 'Shubham Shaw','John Paul','Ankit Rathee','Ayush Patil'],
+    IndianGames: ['Ashok','Param','Balbir','Chandmal','Kishore','Vinankara','Kiran','Rohinee','Sarika','Sravani','Himani','Snehal'],
+    LawnTennis: ['Shubham Shaw', 'Sahil Kumar','Prateek Jha','Aryan Thakur'],
+    Sqaush: ['Aneesh Kamat', 'Ruhaan','Rati ','Namrata','Siddhant'],
+    TableTennis: ['Riddhima Channa', 'Rishi','Saurabh ','Priyam','Sharang','Mitali'],
+    Volleyball: ['Nishant', 'Abhigyan', 'Prakhar', 'Siva', 'kumar', 'Anil', 'Kiran', 'Sandeep','Sakshi', 'Pragati', 'Prerna', 'Jigmat', 'Surbhi', 'Garima', 'Navya', 'Mahek', 'Shristi', 'Riyali'],
+    Weightlifting: ['Amit Meena']
+  };
+
   const handleSportChange = (e) => {
     setSelectedSport(e.target.value);
+    setSelectedName('');  // Reset selected name when sport changes
   };
 
   const handleNameChange = (e) => {
@@ -64,9 +83,9 @@ const FillMemoryForm = () => {
   }
 
   return (
-<div className="fill-memory-page">
+    <div className="fill-memory-page">
       <div className="fill-memory-left">
-      <img src='isc-logo.png' alt='ISC Logo' className='logo' />
+        <img src='isc-logo.png' alt='ISC Logo' className='logo' />
         <h2>ISC YEARBOOK</h2>
         <h3>Fill Your Memory</h3>
         <p>Share your experiences and moments!</p>
@@ -77,20 +96,24 @@ const FillMemoryForm = () => {
             <label htmlFor="sport">Select Sport:</label>
             <select id="sport" value={selectedSport} onChange={handleSportChange} required>
               <option value="">Select</option>
-              <option value="football">Football</option>
-              <option value="basketball">Basketball</option>
+              {Object.keys(sportsPlayers).map((sport) => (
+                <option key={sport} value={sport}>{sport}</option>
+              ))}
             </select>
           </div>
+          {selectedSport && (
+            <div className="form-group">
+              <label htmlFor="name">Select Name:</label>
+              <select id="name" value={selectedName} onChange={handleNameChange} required>
+                <option value="">Select</option>
+                {sportsPlayers[selectedSport].map((player) => (
+                  <option key={player} value={player}>{player}</option>
+                ))}
+              </select>
+            </div>
+          )}
           <div className="form-group">
-            <label htmlFor="name">Select Name:</label>
-            <select id="name" value={selectedName} onChange={handleNameChange} required>
-              <option value="">Select</option>
-              <option value="Raghav">Raghav</option>
-              <option value="Bhavin">Bhavin</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="description">Write about it:</label>
+            <label htmlFor="description">Write about them:</label>
             <textarea id="description" value={description} onChange={handleDescriptionChange} required />
           </div>
           <div className="form-group">
