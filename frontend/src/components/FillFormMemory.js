@@ -71,7 +71,7 @@ const FillMemoryForm = () => {
     }
   
     try {
-      await axios.post('/api/submit', formData);
+      await axios.post('https://yearbook-backend-server.onrender.com/api/submit', formData);
       setSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);

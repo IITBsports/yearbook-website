@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/login', { email, password });
+      const response = await axios.post('https://yearbook-backend-server.onrender.com/api/login', { email, password });
       setError('');
       // Store user data in local storage
       localStorage.setItem('userData', JSON.stringify(response.data));

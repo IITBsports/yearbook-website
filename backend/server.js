@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = process.env.PORT || 8006;
+const port = process.env.PORT || 8081;
 
 const mongoURI = 'mongodb+srv://kalpeshkahre7777:Kalpesh%40123@yearbook.f0h3kns.mongodb.net/yearbook';
 
