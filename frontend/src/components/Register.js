@@ -21,7 +21,6 @@ const Register = () => {
     window.phoneEmailReceiver = async (userObj) => {
       try {
         const user_json_url = userObj.user_json_url;
-        alert('Email Verification Successful!!\nPlease fetch authenticated email id from the following JSON file URL.\n ' + user_json_url);
         
         // Fetch the email from the JSON file
         const response = await axios.get(user_json_url);
@@ -77,7 +76,7 @@ const Register = () => {
       </div>
       <div className='register-section'>
         <h2>Register</h2>
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} autocomplete="off">
           Verify your Ldap:
           <div className="pe_verify_email" data-client-id="15525971141294700440">Verify Email</div>
           <div className='form-group'>
@@ -102,10 +101,11 @@ const Register = () => {
             />
           </div>
           <div className='form-group'>
-            <label htmlFor='password'>Password:</label>
+            <label htmlFor='password' >Password:</label>
             <input
               type='password'
               id='password'
+              autocomplete="defaultpassword"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
