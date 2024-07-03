@@ -77,8 +77,7 @@ const Register = () => {
       <div className='register-section'>
         <h2>Register</h2>
         <form onSubmit={handleRegister} autocomplete="off">
-          Verify your Ldap:
-          <div className="pe_verify_email" data-client-id="15525971141294700440">Verify Email</div>
+          <div className="pe_verify_email" data-client-id="15525971141294700440"></div>
           <div className='form-group'>
             <label htmlFor='name'>Name:</label>
             <input

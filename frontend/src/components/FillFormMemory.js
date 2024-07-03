@@ -15,7 +15,7 @@ const FillMemoryForm = () => {
   const userEmail = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')).email : '';
 
   const sportsPlayers = {
-    Council: ['Anshul Panwar', 'Himanshu M Singhal', 'Riddhima Channa', 'Arpan Adak', 'Angoth Sai Vidhya', 'Anuj Partani', 'Aryan Aswani', 'Adithyan Rajesh', 'Sakshi Patil', 'Parth Dange', 'Goransh Gattani', 'Mukul Raj', 'Aum Jain', 'Sahil Kumar', 'Satyajeet Machale'],
+    'Institute Sports Council': ['Anshul Panwar', 'Himanshu M Singhal', 'Riddhima Channa', 'Arpan Adak', 'Angoth Sai Vidhya', 'Anuj Partani', 'Aryan Aswani', 'Adithyan Rajesh', 'Sakshi Patil', 'Parth Dange', 'Goransh Gattani', 'Mukul Raj', 'Aum Jain', 'Sahil Kumar', 'Satyajeet Machale','Adwait Patwardhan','Param Shah','Snehal Naik','Harsshh Wankhayday','Tushnim Yuvaraj','Subh Verma','Srishti Sharma','Mrunal Lalwani','Atishay Jain','Palak Katiyar','Nandini Chandak','Uditi Malviya','Kaivaly Daga','Ayush Parmar','Kosika Bhanu Prakash','Akhilesh Narayan','Gourav Dhaka','Shubham Sharma','Almaas Ummu Salma','Aditya Wankhade','Pratham Sanghvi','Dhairya Jhunjhunwala'],
     Aquatics: ['Madhav Joshi', 'Mansi Khedekar', 'Onam Pabin', 'Aarushi'],
     Athletics: ['Kapil Bhagat', 'Mayur Morey','Almaas Ummu Salma', 'Dhairya Jhunjhunwala', 'Angoth Sai Vidhya'],
     Badminton: ['Rupansh Parth','Lokesh Soni','Aanya Verma','Shardul','Darsh Yadav','Akshay Padakanti','Anuj Partani','Jathin','Dyuneesh','Soham','Parshant'],
@@ -29,7 +29,8 @@ const FillMemoryForm = () => {
     Sqaush: ['Aneesh Kamat', 'Ruhaan','Rati ','Namrata','Siddhant'],
     TableTennis: ['Riddhima Channa', 'Rishi','Saurabh ','Priyam','Sharang','Mitali'],
     Volleyball: ['Nishant', 'Abhigyan', 'Prakhar', 'Siva', 'kumar', 'Anil', 'Kiran', 'Sandeep','Sakshi', 'Pragati', 'Prerna', 'Jigmat', 'Surbhi', 'Garima', 'Navya', 'Mahek', 'Shristi', 'Riyali'],
-    Weightlifting: ['Amit Meena']
+    Weightlifting: ['Amit Meena'],
+    'Ultimate Frisbee':['Arti Kumar','Kapil Dedhia','Ishika Saini','Almaas Ummu Salma','Suraj Kumar','Karthickeyan V','Kuldeep Sankhat','Harshvardhan Ahirwar','Rujul Bhosale','Shruti Saraf','Dinesh Bomma','Arjun Sadananda','Sakthivel M','Utkarsh Tripathi','Vaibhav Verma','Chhavi','Pranav Adhyapak','Aswin Srivastava','Pooja Verma'],
   };
 
   const handleSportChange = (e) => {

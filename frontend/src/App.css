@@ -7,7 +7,9 @@ body{
   height: 100vh;
   background-color: #f0f0f0;
 }
-
+.instruction{
+  color: #0056b3;
+}
 .response-submitted-left {
   flex: 1;
   background-color: #0056b3;
@@ -566,6 +568,7 @@ button:hover {
 }
 .pe_verify_email{
   margin-bottom: 10px;
+
 }
 @media (max-width: 768px) {
   .welcome-section,

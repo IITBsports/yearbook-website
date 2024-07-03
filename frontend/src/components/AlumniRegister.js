@@ -73,8 +73,10 @@ const AlumniRegister = () => {
       <div className='register-section'>
         <h2>Register as Alumni</h2>
         <form onSubmit={handleRegister}>
-        Verify your Gmail:
+        
           <div className="pe_verify_email" data-client-id="15525971141294700440">Verify Email</div>
+          <p className='instruction'>*If your Ldap doesn't work you<br></br>
+          can use Gmail for verification.</p>
           <div className='form-group'>
             <label htmlFor='name'>Name:</label>
             <input
