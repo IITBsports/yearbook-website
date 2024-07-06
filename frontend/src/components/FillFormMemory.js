@@ -30,7 +30,7 @@ const FillMemoryForm = () => {
     TableTennis: ['Riddhima Channa', 'Rishi','Saurabh ','Priyam','Sharang','Mitali'],
     Volleyball: ['Nishant', 'Abhigyan', 'Prakhar', 'Siva', 'kumar', 'Anil', 'Kiran', 'Sandeep','Sakshi', 'Pragati', 'Prerna', 'Jigmat', 'Surbhi', 'Garima', 'Navya', 'Mahek', 'Shristi', 'Riyali'],
     Weightlifting: ['Amit Meena'],
-    'Ultimate Frisbee':['Arti Kumar','Kapil Dedhia','Ishika Saini','Almaas Ummu Salma','Suraj Kumar','Karthickeyan V','Kuldeep Sankhat','Harshvardhan Ahirwar','Rujul Bhosale','Shruti Saraf','Dinesh Bomma','Arjun Sadananda','Sakthivel M','Utkarsh Tripathi','Vaibhav Verma','Chhavi','Pranav Adhyapak','Aswin Srivastava','Pooja Verma'],
+    'Ultimate Frisbee':['Arti Kumar','Kapil Dedhia','Ishika Saini','Almaas Ummu Salma','Suraj Kumar','Karthickeyan V','Kuldeep Sankhat','Harshvardhan Ahirwar','Rujul Bhosale','Shruti Saraf','Dinesh Bomma','Arjun Sadananda','Sakthivel M','Utkarsh Tripathi','Vaibhav Verma','Chhavi','Pranav Adhyapak','Aswin Srivastava','Pooja Verma','Soumya Kedia'],
   };
 
   const handleSportChange = (e) => {
