@@ -16,7 +16,7 @@ const FillMemoryForm = () => {
 
   const sportsPlayers = {
     'Institute Sports Council': ['Anshul Panwar', 'Himanshu M Singhal', 'Riddhima Channa', 'Arpan Adak', 'Angoth Sai Vidhya', 'Anuj Partani', 'Aryan Aswani', 'Adithyan Rajesh', 'Sakshi Patil', 'Parth Dange', 'Goransh Gattani', 'Mukul Raj', 'Aum Jain', 'Sahil Kumar', 'Satyajeet Machale','Adwait Patwardhan','Param Shah','Snehal Naik','Harsshh Wankhayday','Tushnim Yuvaraj','Subh Verma','Srishti Sharma','Mrunal Lalwani','Atishay Jain','Palak Katiyar','Nandini Chandak','Uditi Malviya','Kaivaly Daga','Ayush Parmar','Kosika Bhanu Prakash','Akhilesh Narayan','Gourav Dhaka','Shubham Sharma','Almaas Ummu Salma','Aditya Wankhade','Pratham Sanghvi','Dhairya Jhunjhunwala'],
-    Aquatics: ['Madhav Joshi', 'Mansi Khedekar', 'Onam Pabin', 'Aarushi'],
+    Aquatics: ['Madhav Joshi', 'Mansi Khedekar', 'Onam Tamir', 'Aarushi','Preety','Vineet','Abinash','Rishabh'],
     Athletics: ['Kapil Bhagat', 'Mayur Morey','Almaas Ummu Salma', 'Dhairya Jhunjhunwala', 'Angoth Sai Vidhya'],
     Badminton: ['Rupansh Parth','Lokesh Soni','Aanya Verma','Shardul','Darsh Yadav','Akshay Padakanti','Anuj Partani','Jathin','Dyuneesh','Soham','Parshant'],
     Basketball: ['Varun Raipat','Atishay Jain','Aryan Aswani' ,'Mehul Vijay Chanda','Girish Kishore' ,'Sreetam Tripathi','Uditi Malviya','Shruti Singh','Sai Krishna','Mudit Goyal','Bitthal Parida','Aum Jain','Priyanshu Niranjan','Raghav Singhal' ],
