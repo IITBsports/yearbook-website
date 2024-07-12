@@ -23,7 +23,7 @@ const FillMemoryForm = () => {
     BoardGames: ['Shreyam Mishra', 'Siddhesh Yeram','Harsshh Wankhayday','Mrunal Lalwani','Himanshu M Singhal'],
     Cricket: ['Prashant Jaiswal','Harsh Sapkale','Praharsh Shah','Yashas P R','Kunal Shahdeo','Ashutosh Kumar','Prathmesh Nachankar ','Siddhant Kalel','Bhagat ','Sanket Ambre ','Ayush Parmar','Adhityan','Adwait Patwardhan','Shubh Verma','Divyansh Shukla','Bitthal','Aditya Wankhede','Upendra'],
     Football: ['Manav Doshi', 'Kaustubh Chaurasia','Akhilesh ','Mokshit','Oshim','Adhi saran','Jatin Chaudhary','Shivanshu Kalia','Onam Tamir','Subhojit','Pushpak','Babu','Pratham Sanghvi'],
-    Hockey: ['Chaitanya Ramprasad', 'Shubham Shaw','John Paul','Ankit Rathee','Ayush Patil','Nandini Chandak'],
+    Hockey: ['Chaitanya Ramprasad', 'Shubham Shaw','John Paul','Ankit Rathee','Ayush Patil','Nandini Chandak','Anshul Panwar'],
     IndianGames: ['Ashok','Param','Balbir','Chandmal','Kishore','Vinankara','Kiran','Rohinee','Sarika','Sravani','Himani','Snehal','Shubham Sharma'],
     LawnTennis: ['Shubham Shaw', 'Sahil Kumar','Prateek Jha','Aryan Thakur','Shubh Verma','Ayush Raisoni'],
     Sqaush: ['Aneesh Kamat', 'Ruhaan','Rati ','Namrata','Siddhant','Ayush Parmar'],
