@@ -51,7 +51,7 @@ const Register = () => {
     }
     try {
       console.log('Sending request to server');
-      const response = await axios.post('https://yearbook-backend-server.onrender.com/api/register', { name, email, password });
+      const response = await axios.post('https://yearbook-website-4.onrender.com/api/register', { name, email, password });
       setSuccess(response.data.message);
       setError('');
       // Redirect to login page after 2 seconds

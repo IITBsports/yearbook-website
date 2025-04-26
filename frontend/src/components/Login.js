@@ -11,7 +11,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://yearbook-backend-server.onrender.com/api/login', { email, password });
+      const response = await axios.post('https://yearbook-website-4.onrender.com/api/login', { email, password });
       setError('');
       // Store user data in local storage
       localStorage.setItem('userData', JSON.stringify(response.data));
@@ -25,7 +25,7 @@ const Login = () => {
     <div className='login-page'>
       <div className='welcome-section'>
         <img src='isc-logo.png' alt='ISC Logo' className='logo' />
-        <h1>Welcome to ISC Yearbook 2024!</h1>
+        <h1>Welcome to ISC Yearbook 2025!</h1>
         <div className='carousel'>
           <img src='image1.jpg' alt='Sport 1' />
           <img src='image2.jpg' alt='Sport 2' />
